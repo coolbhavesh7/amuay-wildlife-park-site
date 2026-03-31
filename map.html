@@ -18,28 +18,23 @@
       </div>
     </header>
 
-    <div class="menuHead">Explore</div>
     <nav class="nav">
-        <a href="index.html">Overview</a>
-        <a href="wildlife.html">Wildlife</a>
-        <a href="flora.html">Flora</a>
-        <a href="visit.html">Plan Your Visit</a>
-        <a href="conservation.html">Conservation</a>
-        <a href="students.html">For Students</a>
-        <a href="teachers.html">For Teachers</a>
-        <a href="fieldwork.html">Fieldwork Guide</a>
-        <a href="map.html" class="active">Map</a>
-        <a href="rules.html">Rules</a>
-        <a href="faq.html">FAQ</a>
-        <a href="checklist.html">Checklist</a>
-        <a href="about.html">About</a>
-        <a href="tours.html">Tours</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
+      <a href="index.html" >Overview</a>
+      <a href="flora&fauna.html">Flora & Fauna</a>
+      <a href="visit.html">Plan Your Visit</a>
+      <a href="conservation.html">Conservation</a>
+      <a href="academicCommunity.html">For Teachers & Students</a>
+      <a href="map.html" class="active">Map</a>
+      <a href="faq.html">FAQ</a>
+      <a href="checklist.html">Checklist</a>
+      <a href="about.html">About</a>
+      <a href="tours.html">Tours</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
     </nav>
 
     <div class="sideNote">
-      Not a detailed navigation map, but a high-level picture of the three landscapes.
+      An outline of the area and its main features.
     </div>
   </aside>
 
@@ -52,42 +47,108 @@
     <div class="top">Map</div>
     <h1 class="big">A simple mental map of Caracas.</h1>
     <p class="subText">
-      Use this description with your teacher’s printed map or classroom
-      materials to visualise where each habitat sits.
     </p>
 
     <section class="sec">
-      <div class="grid-3">
-        <article class="card">
-          <header class="card-header">
-            <h2 class="card-title">Grasslands</h2>
-            <span class="card-tag">Central</span>
+      <div class="campusMapWrap">
+        <figure class="campusMapFigure">
+          <svg class="campusMap" viewBox="0 0 900 520" role="img" aria-label="Imaginary campus map showing north and south campus, roads, water stations, plant zones, and animal spotting areas">
+            <defs>
+              <style>
+                .bg { fill: #f8fafc; }
+                .border { fill: none; stroke: #94a3b8; stroke-width: 3; }
+                .road { fill: none; stroke: #334155; stroke-width: 10; stroke-linecap: round; opacity: 0.55; }
+                .path { fill: none; stroke: #334155; stroke-width: 4; stroke-dasharray: 8 10; opacity: 0.65; }
+                .water { fill: #38bdf8; stroke: #0ea5e9; stroke-width: 2; }
+                .plants { fill: rgba(34, 197, 94, 0.18); stroke: rgba(34, 197, 94, 0.55); stroke-width: 2; }
+                .animals { fill: rgba(245, 158, 11, 0.18); stroke: rgba(245, 158, 11, 0.65); stroke-width: 2; }
+                .zoneLabel { font: 700 18px Arial, sans-serif; fill: #0f172a; }
+                .smallLabel { font: 600 14px Arial, sans-serif; fill: #0f172a; }
+                .note { font: 12px Arial, sans-serif; fill: #334155; }
+              </style>
+            </defs>
+
+            <rect x="18" y="18" width="864" height="484" rx="18" class="bg"></rect>
+            <rect x="18" y="18" width="864" height="484" rx="18" class="border"></rect>
+
+            <path class="road" d="M 120 120 C 220 150, 300 150, 420 120 C 540 90, 650 95, 760 140"></path>
+            <path class="road" d="M 160 420 C 260 360, 360 340, 460 360 C 600 390, 700 380, 780 330"></path>
+            <path class="road" d="M 430 120 C 410 210, 410 280, 450 360"></path>
+
+            <path class="path" d="M 250 180 C 310 230, 360 260, 410 290"></path>
+            <path class="path" d="M 540 180 C 520 250, 510 290, 470 330"></path>
+            <path class="path" d="M 300 390 C 340 330, 380 300, 420 280"></path>
+
+            <rect x="70" y="60" width="330" height="210" rx="16" class="plants"></rect>
+            <text x="92" y="96" class="zoneLabel">North Campus</text>
+            <text x="92" y="122" class="note">Learning gardens + plant collections</text>
+
+            <rect x="520" y="60" width="330" height="210" rx="16" class="animals"></rect>
+            <text x="542" y="96" class="zoneLabel">Animal Spotting Zone</text>
+            <text x="542" y="122" class="note">Quiet viewing pullouts</text>
+
+            <rect x="120" y="300" width="340" height="170" rx="16" class="animals"></rect>
+            <text x="142" y="336" class="zoneLabel">South Campus</text>
+            <text x="142" y="362" class="note">Visitor services + classrooms</text>
+
+            <rect x="520" y="300" width="310" height="170" rx="16" class="plants"></rect>
+            <text x="542" y="336" class="zoneLabel">Plant Nursery</text>
+            <text x="542" y="362" class="note">Native shrubs + seedlings</text>
+
+            <circle cx="205" cy="150" r="10" class="water"></circle>
+            <text x="222" y="155" class="smallLabel">Water Station A</text>
+
+            <circle cx="625" cy="165" r="10" class="water"></circle>
+            <text x="642" y="170" class="smallLabel">Water Station B</text>
+
+            <circle cx="610" cy="410" r="10" class="water"></circle>
+            <text x="627" y="415" class="smallLabel">Water Station C</text>
+
+            <rect x="395" y="235" width="26" height="18" rx="4" fill="#0f172a" opacity="0.75"></rect>
+            <text x="428" y="248" class="smallLabel">Main Gate</text>
+
+            <circle cx="760" cy="120" r="9" fill="#f59e0b" opacity="0.85"></circle>
+            <text x="778" y="125" class="smallLabel">Best spotting ridge</text>
+
+            <circle cx="160" cy="450" r="9" fill="#f59e0b" opacity="0.85"></circle>
+            <text x="178" y="455" class="smallLabel">Dusk sightings</text>
+
+            <g transform="translate(820,70)">
+              <circle cx="0" cy="0" r="28" fill="#ffffff" stroke="#94a3b8" stroke-width="2"></circle>
+              <path d="M 0 -18 L 6 0 L 0 18 L -6 0 Z" fill="#0f172a"></path>
+              <text x="-6" y="-34" class="smallLabel">N</text>
+            </g>
+          </svg>
+          <figcaption class="campusMapCaption">
+            A simple illustrative campus map (not to scale). Use it as a layout guide for labels and navigation ideas.
+          </figcaption>
+        </figure>
+
+        <div class="campusLegend" aria-label="Map legend">
+          <div class="secTitle">Legend</div>
+          <div class="rows">
+            <div class="row">
+              <div class="key">Roads</div>
+              <div class="val">Thick dark lines (vehicle routes)</div>
+            </div>
+            <div class="row">
+              <div class="key">Walking paths</div>
+              <div class="val">Dashed lines (on-foot routes)</div>
+            </div>
+            <div class="row">
+              <div class="key">Water stations</div>
+              <div class="val">Blue dots (A, B, C)</div>
+            </div>
+            <div class="row">
+              <div class="key">Plant areas</div>
+              <div class="val">Green zones (gardens/nursery)</div>
+            </div>
+            <div class="row">
+              <div class="key">Animal spotting</div>
+              <div class="val">Amber zones (quiet viewing)</div>
+            </div>
           </div>
-          <p class="card-body">
-            Broad plains occupy much of the park’s centre, crossed by a small
-            number of dirt tracks used by tour vehicles.
-          </p>
-        </article>
-        <article class="card">
-          <header class="card-header">
-            <h2 class="card-title">Hills</h2>
-            <span class="card-tag">North & West</span>
-          </div>
-          <p class="card-body">
-            Low hills rise to the north and west, offering viewpoints back over
-            the plains and towards the marshes.
-          </p>
-        </article>
-        <article class="card">
-          <header class="card-header">
-            <h2 class="card-title">Marshes</h2>
-            <span class="card-tag">Low‑lying</span>
-          </div>
-          <p class="card-body">
-            Marshy areas sit in the lowest parts of the park, where water
-            collects and reeds, amphibians, and wading birds are common.
-          </p>
-        </article>
+        </div>
       </div>
     </section>
   </main>

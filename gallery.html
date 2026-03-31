@@ -18,28 +18,23 @@
       </div>
     </header>
 
-    <div class="menuHead">Explore</div>
     <nav class="nav">
-        <a href="index.html">Overview</a>
-        <a href="wildlife.html">Wildlife</a>
-        <a href="flora.html">Flora</a>
-        <a href="visit.html">Plan Your Visit</a>
-        <a href="conservation.html">Conservation</a>
-        <a href="students.html">For Students</a>
-        <a href="teachers.html">For Teachers</a>
-        <a href="fieldwork.html">Fieldwork Guide</a>
-        <a href="map.html">Map</a>
-        <a href="rules.html">Rules</a>
-        <a href="faq.html">FAQ</a>
-        <a href="checklist.html">Checklist</a>
-        <a href="about.html">About</a>
-        <a href="tours.html">Tours</a>
-        <a href="gallery.html" class="active">Gallery</a>
-        <a href="contact.html">Contact</a>
+      <a href="index.html">Overview</a>
+      <a href="flora&fauna.html">Flora & Fauna</a>
+      <a href="visit.html">Plan Your Visit</a>
+      <a href="conservation.html">Conservation</a>
+      <a href="academicCommunity.html">For Teachers & Students</a>
+      <a href="map.html">Map</a>
+      <a href="faq.html">FAQ</a>
+      <a href="checklist.html">Checklist</a>
+      <a href="about.html">About</a>
+      <a href="tours.html">Tours</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="contact.html">Contact</a>
     </nav>
 
     <div class="sideNote">
-      A text-first “gallery” you can use for captions and class prompts.
+      The best pictures of Caracas are in your mind, but here are some moments to look for on a guided tour.
     </div>
   </aside>
 
@@ -51,70 +46,98 @@
 
     <div class="top">Gallery</div>
     <h1 class="big">Moments to look for on a guided tour.</h1>
-    <p class="subText">
-      This page doesn’t use heavy images, so it stays fast and clean. Use it like a set
-      of caption prompts—great for students building reports or presentations.
-    </p>
+
 
     <section class="sec">
       <header class="secHead">
         <div>
-          <div class="secTitle">Caption prompts</div>
-          <p class="secSub">Pick a few and try to “collect” them during your visit.</p>
+          <div class="secTitle">Photo Gallery</div>
+          <p class="secSub">Use the horizontal scroller to browse, then select a photo.</p>
         </div>
-        <span class="pill">Simple</span>
-      </div>
+      </header>
 
-      <div class="grid-3">
-        <article class="card">
-          <header class="card-header">
-            <h2 class="card-title">Dawn over marsh water</h2>
-            <span class="card-tag">Marsh</span>
-          </div>
-          <p class="card-body">Mist, reeds, and quiet bird calls. Describe what changes in the first 10 minutes of light.</p>
-        </article>
+      <div class="galleryWidget" aria-label="Photo gallery">
+        <!-- Radios are hidden; CSS shows the selected large image below -->
+        <input type="radio" name="galleryPhoto" id="g-1" checked>
+        <input type="radio" name="galleryPhoto" id="g-2">
+        <input type="radio" name="galleryPhoto" id="g-3">
+        <input type="radio" name="galleryPhoto" id="g-4">
+        <input type="radio" name="galleryPhoto" id="g-5">
+        <input type="radio" name="galleryPhoto" id="g-6">
+        <input type="radio" name="galleryPhoto" id="g-7">
+        <input type="radio" name="galleryPhoto" id="g-8">
 
-        <article class="card">
-          <header class="card-header">
-            <h2 class="card-title">Grassland wind lines</h2>
-            <span class="card-tag">Plains</span>
-          </div>
-          <p class="card-body">Look for moving patterns in grasses and how animals use open space to stay alert.</p>
-        </article>
+        <div class="galleryThumbs" role="list" aria-label="Thumbnails">
+          <label for="g-1" role="listitem">
+            <img src="images/whiteparrot.jpeg" alt="Bird thumbnail">
+          </label>
+          <label for="g-2" role="listitem">
+            <img src="images/whitetiger.jpeg" alt="White tiger thumbnail">
+          </label>
+          <label for="g-3" role="listitem">
+            <img src="images/zebra_final.jpeg" alt="Zebra thumbnail">
+          </label>
+          <label for="g-4" role="listitem">
+            <img src="images/giraffee_final.jpeg" alt="Giraffe thumbnail">
+          </label>
+          <label for="g-5" role="listitem">
+            <img src="images/hyena.jpeg" alt="Hyena thumbnail">
+          </label>
+          <label for="g-6" role="listitem">
+            <img src="images/turtles.jpeg" alt="Turtles thumbnail">
+          </label>
+          <label for="g-7" role="listitem">
+            <img src="images/penguins.jpeg" alt="Penguins thumbnail">
+          </label>
+          <label for="g-8" role="listitem">
+            <img src="images/flower_final.jpeg" alt="Flower thumbnail">
+          </label>
+        </div>
 
-        <article class="card">
-          <header class="card-header">
-            <h2 class="card-title">Shade on the hills</h2>
-            <span class="card-tag">Hills</span>
-          </div>
-          <p class="card-body">Find the boundary between sun and shade and note where insects and birds gather.</p>
-        </article>
+        <div class="galleryViewer" aria-label="Selected photo">
+          <figure class="galleryFigure galleryFigure--g-1">
+            <img src="images/whiteparrot.jpeg" alt="Bird in habitat">
+            <figcaption>White Parrot</figcaption>
+          </figure>
+
+          <figure class="galleryFigure galleryFigure--g-2">
+            <img src="images/whitetiger.jpeg" alt="White tiger in habitat">
+            <figcaption>White Tiger</figcaption>
+          </figure>
+
+          <figure class="galleryFigure galleryFigure--g-3">
+            <img src="images/zebra_final.jpeg" alt="Zebra in habitat">
+            <figcaption>Zebra</figcaption>
+          </figure>
+
+          <figure class="galleryFigure galleryFigure--g-4">
+            <img src="images/giraffee_final.jpeg" alt="Giraffe in habitat">
+            <figcaption>Giraffe</figcaption>
+          </figure>
+
+          <figure class="galleryFigure galleryFigure--g-5">
+            <img src="images/hyena.jpeg" alt="Hyena in habitat">
+            <figcaption>Hyena</figcaption>
+          </figure>
+
+          <figure class="galleryFigure galleryFigure--g-6">
+            <img src="images/turtles.jpeg" alt="Turtles in habitat">
+            <figcaption>Turtles</figcaption>
+          </figure>
+
+          <figure class="galleryFigure galleryFigure--g-7">
+            <img src="images/penguins.jpeg" alt="Penguins in habitat">
+            <figcaption>Penguins</figcaption>
+          </figure>
+
+          <figure class="galleryFigure galleryFigure--g-8">
+            <img src="images/flower_final.jpeg" alt="Flower closeup">
+            <figcaption>Flower</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
-    <section class="sec twoCol">
-      <div class="textBlock">
-        <h2 class="smallHead">If you want to add photos later</h2>
-        <p>
-          You can drop images into the project folder and swap these cards for real photos.
-          For now, the text prompts keep the site light and easy to print.
-        </p>
-        <ul>
-          <li>Keep wildlife distance—use zoom instead.</li>
-          <li>Take notes first; photos are optional.</li>
-          <li>Never leave the vehicle without permission.</li>
-        </ul>
-      </div>
-
-      <aside class="infoBox">
-        <h3 class="infoTitle">Helpful pages</h3>
-        <div class="infoList">
-          • <a href="checklist.html">Checklist</a><br>
-          • <a href="fieldwork.html">Fieldwork guide</a><br>
-          • <a href="rules.html">Rules</a>
-        </div>
-      </aside>
-    </section>
   </main>
 </div>
 </body>

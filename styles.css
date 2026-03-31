@@ -13,6 +13,7 @@ body {
 .page {
   display: flex;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .menuToggle {
@@ -64,6 +65,7 @@ body {
 
 .sidebar {
   width: 260px;
+  flex: 0 0 260px;
   background: linear-gradient(180deg, #dff3e6 0%, #e7f2ff 100%);
   padding: 18px;
   border-right: 1px solid #cbd5e1;
@@ -134,6 +136,7 @@ body {
   padding: 62px 20px 20px;
 
   width: 100%;
+  min-width: 0;
   background: linear-gradient(0deg, rgba(0, 89, 255, 0.3), rgba(0, 204, 255, 0.3)), url('images/Background.jpeg');
   background-size: cover;
 }
@@ -151,12 +154,13 @@ body {
   font-size: 30px;
   margin-bottom: 10px;
   line-height: 1.2;
+  color: rgb(238, 243, 236);
 }
 
 .subText {
   margin-bottom: 16px;
   line-height: 1.55;
-  color: #334155;
+  color: rgb(223, 231, 219);
   max-width: 70ch;
 }
 
@@ -203,7 +207,8 @@ body {
 }
 
 .pic {
-  background: linear-gradient(180deg, #1173c9 0%, #f5fdf0 100%);
+  background: url('images/bison_final.jpeg');
+  background-size: cover;
   border-color: #bbf7d0;
 }
 
@@ -215,6 +220,44 @@ body {
 .rows {
   background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
   border-color: #cbd5e1;
+}
+
+.campusMapWrap {
+  display: grid;
+  gap: 14px;
+}
+
+.campusMapFigure {
+  margin: 0;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 10px 18px rgba(15, 23, 42, 0.06);
+}
+
+.campusMap {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.campusMapCaption {
+  margin-top: 10px;
+  color: #334155;
+  line-height: 1.5;
+  font-size: 13px;
+}
+
+.campusLegend .rows {
+  margin-top: 8px;
+}
+
+@media (min-width: 900px) {
+  .campusMapWrap {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
 }
 
 .row {
@@ -252,11 +295,38 @@ body {
 .card {
   box-shadow: 0 10px 18px rgba(15, 23, 42, 0.08);
   transition: transform 0.12s ease, box-shadow 0.12s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .card:hover {
   transform: translateY(-2px);
   box-shadow: 0 14px 26px rgba(15, 23, 42, 0.12);
+}
+
+.cardImg {
+  width: calc(100% + 28px);
+  margin: -14px -14px 10px;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px 10px 0 0;
+  display: block;
+}
+
+.cardContent {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(4px);
+  margin-top: -36px;
+  padding: 10px 14px 12px;
+  border-radius: 12px;
+  position: relative;
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .cardContent {
+    background: rgba(255, 255, 255, 0.92);
+  }
 }
 
 .card-header {
@@ -448,7 +518,7 @@ body {
   }
 
   .twoCol {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
   }
   .pic {
     grid-row: span 2; 
@@ -471,4 +541,159 @@ body {
     height: 100vh;
     z-index: 25;
   }
+}
+
+/* -----------------------------
+   No-JS CSS Gallery
+   ----------------------------- */
+.galleryWidget {
+  margin-top: 6px;
+  position: relative;
+}
+
+/* Hide radios visually but keep them accessible to screen readers */
+.galleryWidget > input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.galleryThumbs {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 10px 6px 12px;
+  scroll-snap-type: x mandatory;
+}
+
+.galleryThumbs::-webkit-scrollbar {
+  height: 10px;
+}
+
+.galleryThumbs::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.18);
+  border-radius: 999px;
+}
+
+.galleryThumbs label {
+  flex: 0 0 auto;
+  width: 140px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 8px;
+  cursor: pointer;
+  box-shadow: 0 10px 18px rgba(15, 23, 42, 0.06);
+  transition: transform 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease;
+  scroll-snap-align: start;
+}
+
+.galleryThumbs label img {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.galleryThumbs label:hover {
+  transform: translateY(-2px);
+  border-color: #22c55e;
+}
+
+.galleryViewer {
+  margin-top: 10px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 12px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.galleryFigure {
+  display: none;
+  margin: 0;
+}
+
+.galleryFigure img {
+  width: 100%;
+  height: clamp(320px, 55vh, 560px);
+  border-radius: 12px;
+  display: block;
+  object-fit: cover;
+}
+
+.galleryFigure figcaption {
+  margin-top: 10px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Show selected large image (CSS only) */
+#g-1:checked ~ .galleryViewer .galleryFigure--g-1 {
+  display: block;
+}
+
+#g-2:checked ~ .galleryViewer .galleryFigure--g-2 {
+  display: block;
+}
+
+#g-3:checked ~ .galleryViewer .galleryFigure--g-3 {
+  display: block;
+}
+
+#g-4:checked ~ .galleryViewer .galleryFigure--g-4 {
+  display: block;
+}
+
+#g-5:checked ~ .galleryViewer .galleryFigure--g-5 {
+  display: block;
+}
+
+#g-6:checked ~ .galleryViewer .galleryFigure--g-6 {
+  display: block;
+}
+
+#g-7:checked ~ .galleryViewer .galleryFigure--g-7 {
+  display: block;
+}
+
+#g-8:checked ~ .galleryViewer .galleryFigure--g-8 {
+  display: block;
+}
+
+/* Highlight selected thumbnail */
+#g-1:checked ~ .galleryThumbs label[for="g-1"] {
+  border-color: #22c55e;
+  box-shadow: 0 14px 26px rgba(16, 185, 129, 0.22);
+}
+
+#g-2:checked ~ .galleryThumbs label[for="g-2"] {
+  border-color: #22c55e;
+  box-shadow: 0 14px 26px rgba(16, 185, 129, 0.22);
+}
+
+#g-3:checked ~ .galleryThumbs label[for="g-3"] {
+  border-color: #22c55e;
+  box-shadow: 0 14px 26px rgba(16, 185, 129, 0.22);
+}
+
+#g-4:checked ~ .galleryThumbs label[for="g-4"] {
+  border-color: #22c55e;
+  box-shadow: 0 14px 26px rgba(16, 185, 129, 0.22);
+}
+
+#g-5:checked ~ .galleryThumbs label[for="g-5"],
+#g-6:checked ~ .galleryThumbs label[for="g-6"],
+#g-7:checked ~ .galleryThumbs label[for="g-7"],
+#g-8:checked ~ .galleryThumbs label[for="g-8"] {
+  border-color: #22c55e;
+  box-shadow: 0 14px 26px rgba(16, 185, 129, 0.22);
 }
