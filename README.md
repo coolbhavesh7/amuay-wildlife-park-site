@@ -1,34 +1,46 @@
-# Caracas Wildlife Park (HTML + CSS)
+# Amuay Wildlife Park Website (HTML + CSS)
 
-Pure **HTML + CSS** multi-page site with a sidebar and modern styling.
+This is a website project about **Amuay Wildlife Park**.
+We made it as a multi-page static site using only HTML and CSS, with a shared sidebar navigation so every page feels connected.
 
-## Files
+## Project Description
 
-- `index.html`
-- `wildlife.html`
-- `flora.html`
-- `visit.html`
-- `conservation.html`
-- `styles.css`
+The goal of this website is to introduce a wildlife park in a simple, informative way.
+It includes visitor information, wildlife details, conservation topics, student-focused content, and visual pages like the gallery and map.
 
-## Run it
+## Pages Included
 
-### Option A: open the file
+- `index.html` - Overview / home page
+- `flora&fauna.html` - Wildlife and plant life highlights
+- `visit.html` - Plan your visit details
+- `conservation.html` - Conservation information
+- `academicCommunity.html` - For teachers and students
+- `map.html` - Park map overview
+- `faq.html` - Frequently asked questions
+- `checklist.html` - Observation checklist
+- `about.html` - About the park
+- `tours.html` - Tour options
+- `gallery.html` - Photo gallery
+- `contact.html` - Contact page
 
-Open `index.html` in your browser (double-click it on macOS).
+## How To Run
 
-### Option B (recommended): run a tiny local server
+### Option 1: Open directly
 
-From Terminal:
+Open `index.html` in your browser.
+
+### Option 2 (recommended): Local server
+
+Run this in terminal:
 
 ```bash
-cd "/path/to/your/project"
+cd "/path/to/amuay-wildlife-park-site"
 python3 -m http.server 8000
 ```
 
-Then open `http://localhost:8000` in your browser.
+Then visit `http://localhost:8000`.
 
 ## Notes
 
-- All pages share the same `styles.css`.
-- The sidebar uses an `.active` class to highlight the current page.
+- All pages use the same `styles.css`.
+- The sidebar uses the `.active` class to show the current page.
